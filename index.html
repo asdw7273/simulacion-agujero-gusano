@@ -34,12 +34,12 @@
         
         <!-- Enlace de descarga para Windows -->
         <div style="background-color: #202b38; padding: 25px; border-radius: 8px; margin: 30px 0; text-align: center; border: 1px solid #3b4e63;">
-            <h3 style="margin-top: 0; color: #fff;">🚀 Experimenta la simulación a máxima calidad</h3>
+            <h3 style="margin-top: 0; color: #fff;"> Experimenta la simulación a máxima calidad</h3>
             <p style="color: #ccc; font-size: 0.95em;">
-                Los navegadores web limitan el rendimiento de los cálculos relativistas pesados en la GPU. Para una experiencia fluida a 60+ FPS, con resolución nativa y el algoritmo Runge-Kutta 4 a 250 iteraciones, se recomienda descargar la versión de escritorio.
+                Los navegadores web limitan el rendimiento de los cálculos relativistas pesados en la GPU. Para una experiencia fluida, con resolución nativa y el algoritmo Runge-Kutta 4, se recomienda descargar la versión de escritorio.
             </p>
             <!-- REEMPLAZA ESTA URL POR EL ENLACE DE TU PROYECTO DE ITCH.IO DONDE ESTÁ EL ZIP DE WINDOWS -->
-            <a href="https://tu-usuario.itch.io/tu-proyecto" target="_blank" style="background-color: #0076ff; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">📥 Descargar Versión de Windows (ZIP)</a>
+            <a href="https://halbarito.itch.io/agujero-de-gusano-de-morris-thorne" target="_blank" style="background-color: #0076ff; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">📥 Descargar Versión de Windows (ZIP)</a>
         </div>
     </section>
 
@@ -61,7 +61,7 @@
         
         <!-- Ejemplo de cómo insertar una imagen que subiste a la carpeta img -->
         <div style="text-align: center; margin: 20px 0;">
-            <img src="img/embebimiento.png" alt="Diagrama de embebimiento" style="max-width: 100%; border-radius: 6px;">
+            <img src="Figure_1.png" alt="Diagrama de embebimiento" style="max-width: 100%; border-radius: 6px;">
             <p style="font-size: 0.85em; color: #777;"><em>Diagrama de embebimiento del agujero de gusano en el espacio euclídeo.</em></p>
         </div>
     </section>
@@ -70,25 +70,38 @@
     <section>
         <h2>Efectos Físicos Simulados</h2>
         
-        <h3>1. Lente Gravitacional y Anillo de Einstein</h3>
+        <!-- PUNTO 1: LENTE GRAVITACIONAL + IMAGEN -->
+        <h3>1. Lente Gravitacional</h3>
         <p>
-            La curvatura del espacio-tiempo actúa como una lente gravitacional que desvía la trayectoria de los rayos de luz. Cerca del borde de la garganta, la fuerte compresión de los rayos genera un anillo de alta intensidad luminosa, análogo al anillo de Einstein observado en la astrofísica observacional.
+            La extrema curvatura del espacio-tiempo en las proximidades del agujero de gusano actúa como una lente gravitacional que desvía la trayectoria natural de los rayos de luz. Esto provoca una distorsión visual muy pronunciada en los objetos de fondo que se observan cerca del horizonte de la garganta.
         </p>
+        <!-- Imagen del efecto (puedes cambiar "embebimiento.png" por "Agujero_de_gusano.png" si prefieres mostrar la captura de la simulación) -->
+        <div style="text-align: center; margin: 20px 0;">
+            <img src=".png" alt="Simulación de Lente Gravitacional" style="max-width: 100%; border-radius: 8px; border: 1px solid #333;">
+            <p style="font-size: 0.85em; color: #777;"><em>Visualización de la distorsión del espacio-tiempo en la garganta.</em></p>
+        </div>
 
+        <!-- PUNTO 2: ROTACIÓN INVERSA + VÍDEO EMBEBIDO -->
         <h3>2. Efecto de Rotación Inversa</h3>
         <p>
             Al orbitar alrededor del agujero de gusano en un universo, la proyección geométrica de las geodésicas al cruzar la garganta provoca que la imagen del universo opuesto vista a través de la garganta rote en la dirección opuesta a nuestro movimiento.
         </p>
+        <!-- Vídeo de la órbita (Sección 3.2 del TFG) -->
+        <div style="text-align: center; margin: 25px 0;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5STlRx6uaSk" title="Órbita alrededor del agujero de gusano" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: none; border-radius: 8px; max-width: 100%;"></iframe>
+            <p style="font-size: 0.85em; color: #777;"><em>Demostración dinámica del efecto de rotación inversa al orbitar la garganta.</em></p>
+        </div>
 
-        <h3>3. Estructura de Múltiples Anillos (Atravesamiento Radial)</h3>
+        <!-- PUNTO 3 (ANTIGUO 4): LÍMITE DE MINKOWSKI + VÍDEO EMBEBIDO -->
+        <h3>3. Límite de Minkowski</h3>
         <p>
-            Al aproximarnos radialmente al centro (\(l \to 0\)), pequeñas variaciones angulares en los rayos de luz se amplifican exponencialmente. Esto provoca que el observador vea el entorno de origen repetido en anillos concéntricos cada vez más delgados debido a los fotones que orbitan la garganta antes de escapar.
+            Al reducir el radio de la garganta (\(b_0 \to 0\)), la curvatura disminuye gradualmente hasta recuperar de forma exacta la métrica plana usual de Minkowski (el espacio plano habitual de la Relatividad Especial), desapareciendo todo efecto de lente gravitacional.
         </p>
-
-        <h3>4. Recuperación de la Métrica de Minkowski</h3>
-        <p>
-            Al interactuar con el control y reducir el radio de la garganta (\(b_0 \to 0\)), la curvatura disminuye gradualmente hasta recuperar la métrica plana usual de Minkowski (espacio plano habitual de la Relatividad Especial), desapareciendo todo efecto de lente gravitacional.
-        </p>
+        <!-- Vídeo de la apertura (Sección 3.1 del TFG) -->
+        <div style="text-align: center; margin: 25px 0;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/klIwYzmAbdg" title="Apertura del agujero de gusano" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: none; border-radius: 8px; max-width: 100%;"></iframe>
+            <p style="font-size: 0.85em; color: #777;"><em>Transición interactiva desde la métrica de Morris-Thorne al espacio plano de Minkowski.</em></p>
+        </div>
     </section>
 
     <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #ccc; text-align: center; font-size: 0.85em;">

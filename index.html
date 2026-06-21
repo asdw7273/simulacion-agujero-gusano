@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación Agujero de Gusano - Álvaro Pérez García</title>
+    <!-- Usamos un estilo CSS formal y académico muy ligero -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <!-- MathJax para que las ecuaciones matemáticas se rendericen bien -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <header style="text-align: center; margin-bottom: 40px;">
+        <h1>Simulación en Tiempo Real de un Agujero de Gusano de Morris-Thorne</h1>
+        <p><strong>Autor:</strong> Álvaro Pérez García | <strong>Tutor:</strong> Dr. Iván Martí Vidal</p>
+        <p><em>Trabajo de Fin de Grado en Física | Universitat de València (Junio de 2025)</em></p>
+    </header>
+
+    <hr>
+
+    <!-- Simulador WebGL incrustado -->
+    <section style="text-align: center; margin-bottom: 40px;">
+        <h2>Simulador Interactivo (Versión Web de Prueba)</h2>
+        
+        <!-- REEMPLAZA ESTE IFRAME POR EL QUE COPIASTE DE ITCH.IO EN EL PASO 1 -->
+        <iframe frameborder="0" src="https://itch.io/embed/4698432" width="552" height="167"><a href="https://halbarito.itch.io/agujero-de-gusano-de-morris-thorne">Agujero de gusano de Morris-Thorne by Halbarito</a></iframe>
+        
+        <p style="font-size: 0.9em; color: #777; margin-top: 10px;">
+            <strong>Controles:</strong> WASD para moverte, Ratón para orientar la cámara, Q/E para rotar la nave. <br>
+            Pulsa las teclas <strong>T</strong> (abrir) y <strong>G</strong> (cerrar) para modificar el radio de la garganta en tiempo real.
+        </p>
+        
+        <!-- Enlace de descarga para Windows -->
+        <div style="background-color: #202b38; padding: 25px; border-radius: 8px; margin: 30px 0; text-align: center; border: 1px solid #3b4e63;">
+            <h3 style="margin-top: 0; color: #fff;">🚀 Experimenta la simulación a máxima calidad</h3>
+            <p style="color: #ccc; font-size: 0.95em;">
+                Los navegadores web limitan el rendimiento de los cálculos relativistas pesados en la GPU. Para una experiencia fluida a 60+ FPS, con resolución nativa y el algoritmo Runge-Kutta 4 a 250 iteraciones, se recomienda descargar la versión de escritorio.
+            </p>
+            <!-- REEMPLAZA ESTA URL POR EL ENLACE DE TU PROYECTO DE ITCH.IO DONDE ESTÁ EL ZIP DE WINDOWS -->
+            <a href="https://tu-usuario.itch.io/tu-proyecto" target="_blank" style="background-color: #0076ff; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">📥 Descargar Versión de Windows (ZIP)</a>
+        </div>
+    </section>
+
+    <!-- Resumen y Marco Teórico -->
+    <section>
+        <h2>Resumen del Proyecto</h2>
+        <p>
+            Este proyecto presenta una visualización interactiva en tiempo real de un agujero de gusano estático y con simetría esférica descrito por la métrica de Morris-Thorne. La propagación de la luz en este espacio-tiempo curvo se ha resuelto numéricamente mediante el trazado de rayos inverso y la integración de las geodésicas nulas utilizando un algoritmo de Runge-Kutta de 4º orden (RK4).
+        </p>
+        
+        <h2>La Métrica de Morris-Thorne</h2>
+        <p>
+            Propuesta en 1988 por Michael Morris y Kip Thorne para describir un agujero de gusano transitable sin horizonte de sucesos, el elemento de línea en coordenadas de tiempo global \(t\) y radial \(l\) se expresa como:
+        </p>
+        $$ds^2 = -c^2 dt^2 + dl^2 + (b_0^2 + l^2)(d\theta^2 + \sin^2\theta d\phi^2)$$
+        <p>
+            Donde \(b_0\) representa el radio de la garganta del agujero de gusano en el punto de transición \(l = 0\), conectando dos regiones asintóticamente planas (\(l > 0\) y \(l < 0\)).
+        </p>
+        
+        <!-- Ejemplo de cómo insertar una imagen que subiste a la carpeta img -->
+        <div style="text-align: center; margin: 20px 0;">
+            <img src="img/embebimiento.png" alt="Diagrama de embebimiento" style="max-width: 100%; border-radius: 6px;">
+            <p style="font-size: 0.85em; color: #777;"><em>Diagrama de embebimiento del agujero de gusano en el espacio euclídeo.</em></p>
+        </div>
+    </section>
+
+    <!-- Fenómenos físicos explicados -->
+    <section>
+        <h2>Efectos Físicos Simulados</h2>
+        
+        <h3>1. Lente Gravitacional y Anillo de Einstein</h3>
+        <p>
+            La curvatura del espacio-tiempo actúa como una lente gravitacional que desvía la trayectoria de los rayos de luz. Cerca del borde de la garganta, la fuerte compresión de los rayos genera un anillo de alta intensidad luminosa, análogo al anillo de Einstein observado en la astrofísica observacional.
+        </p>
+
+        <h3>2. Efecto de Rotación Inversa</h3>
+        <p>
+            Al orbitar alrededor del agujero de gusano en un universo, la proyección geométrica de las geodésicas al cruzar la garganta provoca que la imagen del universo opuesto vista a través de la garganta rote en la dirección opuesta a nuestro movimiento.
+        </p>
+
+        <h3>3. Estructura de Múltiples Anillos (Atravesamiento Radial)</h3>
+        <p>
+            Al aproximarnos radialmente al centro (\(l \to 0\)), pequeñas variaciones angulares en los rayos de luz se amplifican exponencialmente. Esto provoca que el observador vea el entorno de origen repetido en anillos concéntricos cada vez más delgados debido a los fotones que orbitan la garganta antes de escapar.
+        </p>
+
+        <h3>4. Recuperación de la Métrica de Minkowski</h3>
+        <p>
+            Al interactuar con el control y reducir el radio de la garganta (\(b_0 \to 0\)), la curvatura disminuye gradualmente hasta recuperar la métrica plana usual de Minkowski (espacio plano habitual de la Relatividad Especial), desapareciendo todo efecto de lente gravitacional.
+        </p>
+    </section>
+
+    <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #ccc; text-align: center; font-size: 0.85em;">
+        <p>TFG de Álvaro Pérez García (Junio de 2025). Universitat de València.</p>
+        <p><a href="ENLACE_A_TU_REPOSITORIO_GITHUB" target="_blank">Código fuente en GitHub</a> | <a href="ENLACE_A_TU_PDF_MEMORIA" target="_blank">Descargar Memoria (PDF)</a></p>
+    </footer>
+
+</body>
+</html>
